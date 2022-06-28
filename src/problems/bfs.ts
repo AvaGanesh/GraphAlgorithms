@@ -1,6 +1,11 @@
-import {adjacencyGraph} from './dfs';
+import {adjacencyMatrix} from './dfs';
 
-export const breadthFirstSearch = (graph: adjacencyGraph, source: string) => {
+/**
+ * @function breadthFirstSearch -  implemented iteratively using queue 
+ * @param {adjacencyMatrix} graph - adjacency list of the graph
+ * @param {string} source - starting point
+ */
+export const breadthFirstSearch = (graph: adjacencyMatrix, source: string) => {
   const queue = [source];
   while (queue.length > 0) {
     const current = queue.shift();
