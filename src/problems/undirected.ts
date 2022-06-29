@@ -22,7 +22,7 @@ export const undirectedPath = (
  * @param {string[][]} edges - edges of a graph 
  * @returns {adjacencyMatrix} - adjacency matrix
  */
-const buildGraph = (edges: string[][]): adjacencyMatrix<string> => {
+export const buildGraph = (edges: string[][]): adjacencyMatrix<string> => {
   const graph: adjacencyMatrix<string> = {};
   for (let edge of edges) {
     const [a, b] = edge;
@@ -36,7 +36,7 @@ const buildGraph = (edges: string[][]): adjacencyMatrix<string> => {
 
 /**
  *
- * @param graph
+ * @param {adjacencyMatrix<string>} graph - adjacencyMatrix of the graph
  * @param {string} src - source node
  * @param {string} dest - destination node
  * @param {Set<string>} visited - maintaining a visited set inorder to avoid an infinite loop

@@ -1,13 +1,16 @@
 import {breadthFirstSearch} from './problems/bfs';
+import { connectedComponents } from './problems/connectedComponents';
 import {
   adjacencyMatrix,
   depthFirstPrint,
   depthFirstPrintRecursive,
 } from './problems/dfs';
 import {hasPathBFS, hasPathDFS} from './problems/hasPath';
+import { largestComponent } from './problems/largestComponent';
+import { shortestPath } from './problems/shortestPath';
 import { undirectedPath } from './problems/undirected';
 
-const graph: adjacencyMatrix = {
+const graph: adjacencyMatrix<string> = {
   a: ['b', 'c'],
   b: ['d'],
   c: ['e'],
@@ -49,4 +52,29 @@ const edges = [
 ];
 
 
-console.log(undirectedPath(edges, 'j', 'm'));
+console.log('undirectedPath', undirectedPath(edges, 'j', 'm'));
+
+
+const connectedGraph = {
+    0: [8, 1, 5],
+    1: [0],
+    5: [0, 8],
+    8: [0, 5],
+    2: [3, 4],
+    3: [2, 4],
+    4: [3, 2]
+};
+
+console.log('connectedGraph', connectedComponents(connectedGraph));
+
+console.log('largestComponent', largestComponent(connectedGraph));
+
+
+
+console.log('shortestPath', shortestPath([
+  ['w', 'x'],
+  ['x', 'y'],
+  ['z', 'y'],
+  ['z', 'v'],
+  ['w', 'v']
+], 'w', 'z'), 'w', 'z');
