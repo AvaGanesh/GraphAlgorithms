@@ -2,7 +2,7 @@ import {adjacencyMatrix} from './dfs';
 
 /**
  *
- *  {@link https://structy.net/problems/undirected-path  undirectedPath} - Link to problem statement
+ *  {@link http://structy.net/problems/undirected-path  undirectedPath} - Link to problem statement
  * @param {string[][]} edges - edges of a graph
  * @param {string} nodeA
  * @param {string} nodeB
@@ -22,8 +22,8 @@ export const undirectedPath = (
  * @param {string[][]} edges - edges of a graph 
  * @returns {adjacencyMatrix} - adjacency matrix
  */
-const buildGraph = (edges: string[][]): adjacencyMatrix => {
-  const graph: adjacencyMatrix = {};
+const buildGraph = (edges: string[][]): adjacencyMatrix<string> => {
+  const graph: adjacencyMatrix<string> = {};
   for (let edge of edges) {
     const [a, b] = edge;
     if (!(a in graph)) graph[a] = [];
@@ -43,7 +43,7 @@ const buildGraph = (edges: string[][]): adjacencyMatrix => {
  * @returns {boolean} - returns whether `dest` is reachable from `src` 
  */
 const hasPath = (
-  graph: adjacencyMatrix,
+  graph: adjacencyMatrix<string>,
   src: string,
   dest: string,
   visited: Set<string>

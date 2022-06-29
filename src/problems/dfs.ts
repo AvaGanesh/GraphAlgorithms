@@ -3,14 +3,14 @@
  * @param source : source node
  */
 
-export type adjacencyMatrix = {
+export type adjacencyMatrix<T> = {
   /**
    * node : adjacent nodes
    */
-  [node: string]: string[];
+  [node: string | number]: T[];
 };
 
-export const depthFirstPrint = (graph: adjacencyMatrix, source: string) => {
+export const depthFirstPrint = (graph: adjacencyMatrix<string>, source: string) => {
   const stack = [source];
 
   while (stack.length > 0) {
@@ -25,7 +25,7 @@ export const depthFirstPrint = (graph: adjacencyMatrix, source: string) => {
 };
 
 export const depthFirstPrintRecursive = (
-  graph: adjacencyMatrix,
+  graph: adjacencyMatrix<string>,
   source: string
 ) => {
   console.log(source);

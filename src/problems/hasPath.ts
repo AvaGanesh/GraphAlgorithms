@@ -11,7 +11,7 @@ import {adjacencyMatrix} from './dfs';
  * @returns {boolean} - whether destination is reachable from src
  */
 export const hasPathDFS = (
-  graph: adjacencyMatrix,
+  graph: adjacencyMatrix<string>,
   src: string,
   dest: string
 ): boolean => {
@@ -33,7 +33,7 @@ export const hasPathDFS = (
  * @returns {boolean} - whether destination is reachable from src
  */
 export const hasPathBFS = (
-  graph: adjacencyMatrix,
+  graph: adjacencyMatrix<string>,
   src: string,
   dest: string
 ): boolean => {
