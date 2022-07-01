@@ -1,13 +1,13 @@
 import {buildGraph} from './undirected';
 
 /**
- * @description - Find shortest path between two given nodes 
+ * @description - Find shortest path between two given nodes
  * {@link https://structy.net/problems/shortest-path  shortestPath} - Link to problem statement
- * @param {string[][]} edges - edges of the graph 
- * @param {string} nodeA - starting node 
+ * @param {string[][]} edges - edges of the graph
+ * @param {string} nodeA - starting node
  * @param {string} nodeB - destination node
  * @returns {number} number - shortest distance between `nodeA` and `nodeB`
- * 
+ *
  * @remarks Uses BFS to calculate shortest distance
  */
 export const shortestPath = (

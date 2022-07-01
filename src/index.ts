@@ -6,7 +6,9 @@ import {
   depthFirstPrintRecursive,
 } from './problems/dfs';
 import {hasPathBFS, hasPathDFS} from './problems/hasPath';
+import { islandCount } from './problems/islandCount';
 import { largestComponent } from './problems/largestComponent';
+import { minimumIsland } from './problems/minimumIsland';
 import { shortestPath } from './problems/shortestPath';
 import { undirectedPath } from './problems/undirected';
 
@@ -78,3 +80,17 @@ console.log('shortestPath', shortestPath([
   ['z', 'v'],
   ['w', 'v']
 ], 'w', 'z'), 'w', 'z');
+
+
+const grid = [
+  ['W', 'L', 'W', 'W', 'W'],
+  ['W', 'L', 'W', 'W', 'W'],
+  ['W', 'W', 'W', 'L', 'W'],
+  ['W', 'W', 'L', 'L', 'W'],
+  ['L', 'W', 'W', 'L', 'L'],
+  ['L', 'L', 'W', 'W', 'W'],
+];
+  
+console.log('islandCount', islandCount(grid)); 
+
+console.log('minIsland', minimumIsland(grid));
